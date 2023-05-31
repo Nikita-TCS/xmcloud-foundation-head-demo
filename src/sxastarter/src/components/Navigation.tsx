@@ -128,7 +128,7 @@ const NavigationList = (props: NavigationProps) => {
       key={props.fields.Id}
       tabIndex={0}
     >
-      <div className="navigation-title">
+      <div className="navigation-title test">
         <Link
           field={getLinkField(props)}
           editable={sitecoreContext.pageEditing}
