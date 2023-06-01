@@ -1,4 +1,12 @@
-import { Text, Field, Image, Link, LinkField, ImageField } from '@sitecore-jss/sitecore-jss-nextjs';
+import {
+  Text,
+  Field,
+  Image,
+  Link,
+  LinkField,
+  ImageField,
+  RichText,
+} from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 type MyTestComponent = ComponentProps & {
   fields: {
@@ -10,9 +18,9 @@ type MyTestComponent = ComponentProps & {
   };
 };
 export const Default = (props: MyTestComponent): JSX.Element => {
-  const { title, subtitle, ctaLink, backgroundImage } = props.fields;
+  const { title, subtitle, ctaLink, backgroundImage, ctaText } = props.fields;
   return (
-    <section className="hero-banner-buttonleft mt-4 bg-image mb-2 py-4 h-300 test2">
+    <section className="hero-banner-buttonleft mt-4 bg-image mb-2 py-4 h-300">
       <div className="container-fluid p-0 width-118per bg-color">
         <div className="card border-0">
           <div className="card-image h-300">
@@ -27,6 +35,9 @@ export const Default = (props: MyTestComponent): JSX.Element => {
               <h4 className="card-text mt-4 mb-4 py-2 clr-gry fs-20">
                 <Text field={subtitle} />
               </h4>
+              <div>
+                <RichText field={ctaText} />
+              </div>
               <Link
                 field={ctaLink}
                 showLinkTextWithChildrenPresent={true}
