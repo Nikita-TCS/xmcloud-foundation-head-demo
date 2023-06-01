@@ -12,7 +12,7 @@ type MyTestComponent = ComponentProps & {
 export const Default = (props: MyTestComponent): JSX.Element => {
   const { title, subtitle, ctaLink, backgroundImage } = props.fields;
   return (
-    <section className="hero-banner-buttonleft mt-4 bg-image mb-2 py-4 h-300 test">
+    <section className="hero-banner-buttonleft mt-4 bg-image mb-2 py-4 h-300 test2">
       <div className="container-fluid p-0 width-118per bg-color">
         <div className="card border-0">
           <div className="card-image h-300">
